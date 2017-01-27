@@ -1,32 +1,31 @@
 <script type='text/javascript'>
 $(function() {
-    Dashing.widget_base_dimensions = [240, 320]
-    Dashing.numColumns = 5
-    Dashing.numRows = 3
+    Dashing.widget_base_dimensions = [320, 50]
+    Dashing.numColumns = 4
+    Dashing.numRows = 15
 
 });
 </script>
 
-<% content_for :title do %>Гонка!<% end %>
+<% content_for :title do %>Табло<% end %>
 <div class="gridster">
   <ul>
   
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-	<div data-id="race-caption" data-view="Text" data-title="Мероприятие" data-text="Заезд" data-moreinfo="Подгруппа1, Подгруппа2, Подгруппа3"></div>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="3">
+	<div data-id="caption" data-view="Text"></div>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="4" data-sizey="3">
-      <div data-id="race-table" data-view="Table" data-title="Положение на трассе"></div>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="3">
+      <div data-id="race-time" data-view="Number" data-title="Время заезда"></div>
     </li>    
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="3">
       <div data-id="current-lap" data-view="Number" data-title="Текущий круг" style="background-color:#ff9618"></div>
-      </li>    
+    </li>    
       
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="laps-to-go" data-view="Number" data-title="Кругов осталось"></div>
-      </li>    
-      
-
+    <li data-row="1" data-col="1" data-sizex="4" data-sizey="10">
+      <div data-id="race-table" data-view="Table" data-title="Положение на трассе"></div>
+    </li>    
+    
   </ul>
 </div>
